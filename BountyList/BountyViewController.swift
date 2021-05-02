@@ -115,6 +115,7 @@ class BountyViewModel{
         return bountyInfoList.count
     }
     
+    
     func bountyInfo(at index: Int) -> BountyInfo{
         return sortedList[index]
     }
