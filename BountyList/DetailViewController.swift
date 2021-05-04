@@ -41,13 +41,6 @@ class DetailViewController: UIViewController {
     }
     
     private func showAnimation(){
-//        nameLabelCenterX.constant = 0
-//        bountyLabelCenterX.constant = 0
-//
-//        UIView.animate(withDuration: 0.5, delay: 0.2, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {self.view.layoutIfNeeded()}, completion: nil)
-//
-//        UIView.transition(with: imgView, duration: 0.3, options: .transitionFlipFromLeft, animations: nil, completion: nil)
-        
         UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.6, initialSpringVelocity: 2, options: .allowUserInteraction, animations: {self.nameLabel.transform = CGAffineTransform.identity
             self.nameLabel.alpha = 1
         }, completion: nil)
@@ -59,7 +52,6 @@ class DetailViewController: UIViewController {
     }
     
     func updateUI() {
-        
         if let bountyInfo = self.viewModel.bountyInfo{
             imgView.image = bountyInfo.image
             nameLabel.text = bountyInfo.name
@@ -70,7 +62,6 @@ class DetailViewController: UIViewController {
     @IBAction func close(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
-    
 }
 
 class DetailViewModel {
